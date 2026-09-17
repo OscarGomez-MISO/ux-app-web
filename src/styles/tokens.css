@@ -1,0 +1,25 @@
+:root {
+  color-scheme: light;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+
+  --color-primary: #006878;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #a6edff;
+  --color-on-primary-container: #001f25;
+  --color-surface: #f7fafb;
+  --color-surface-container: #edf2f4;
+  --color-on-surface: #171d1f;
+  --color-on-surface-variant: #3f484b;
+  --color-outline: #6f797c;
+  --color-error: #ba1a1a;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --radius-small: 0.5rem;
+  --radius-medium: 0.75rem;
+  --content-max-width: 80rem;
+}
