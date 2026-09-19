@@ -1,0 +1,40 @@
+/* Alias temporales · borrar cuando Óscar migre
+   ------------------------------------------------------------------
+   El andamiaje inicial (commit e318e5e) usaba nombres propios
+   --color-*, --space-*, --radius-* y --content-max-width.
+   El sistema de diseño real es tokens.css, que usa --md-sys-color-*,
+   --sp-* y --r-*, y no se edita.
+
+   Este archivo traduce los nombres viejos a los nuevos para que nada
+   se rompa mientras Óscar migra sus pantallas. TEMPORAL: en cuanto
+   W01-W05 usen --md-sys-color-*, se borra este archivo y su import
+   en main.tsx. Ningún componente nuevo debe usar estos nombres. */
+
+:root {
+  /* ---- color ---- */
+  --color-primary: var(--md-sys-color-primary);
+  --color-on-primary: var(--md-sys-color-on-primary);
+  --color-primary-container: var(--md-sys-color-primary-container);
+  --color-on-primary-container: var(--md-sys-color-on-primary-container);
+  --color-surface: var(--md-sys-color-surface);
+  --color-surface-container: var(--md-sys-color-surface-container);
+  --color-on-surface: var(--md-sys-color-on-surface);
+  --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+  --color-outline: var(--md-sys-color-outline);
+  --color-error: var(--md-sys-color-error);
+
+  /* ---- espaciado · el viejo iba en rem, el nuevo en px ---- */
+  --space-1: var(--sp-1);
+  --space-2: var(--sp-2);
+  --space-3: var(--sp-3);
+  --space-4: var(--sp-4);
+  --space-6: var(--sp-6);
+  --space-8: var(--sp-8);
+
+  /* ---- radios ---- */
+  --radius-small: var(--r-sm);
+  --radius-medium: var(--r-md);
+
+  /* ---- marco ---- */
+  --content-max-width: var(--content-w);
+}
