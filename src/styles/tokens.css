@@ -1,25 +1,71 @@
+/* Alarmas y recordatorios accionables · tokens del Design System
+   Material 3 generado desde la semilla #006878 (HCT 215).
+   NO EDITAR. Este archivo es idéntico en los dos repositorios.
+   Su equivalente en el repositorio móvil es src/theme/colors.js */
+
 :root {
-  color-scheme: light;
-  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  /* ---- primario · acción principal y estado activo ---- */
+  --md-sys-color-primary: #006878;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #A7EDFF;
+  --md-sys-color-on-primary-container: #001F25;
 
-  --color-primary: #006878;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #a6edff;
-  --color-on-primary-container: #001f25;
-  --color-surface: #f7fafb;
-  --color-surface-container: #edf2f4;
-  --color-on-surface: #171d1f;
-  --color-on-surface-variant: #3f484b;
-  --color-outline: #6f797c;
-  --color-error: #ba1a1a;
+  /* ---- secundario · apoyo y superficies frías ---- */
+  --md-sys-color-secondary: #4B6268;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #CDE7EE;
+  --md-sys-color-on-secondary-container: #051F24;
 
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --radius-small: 0.5rem;
-  --radius-medium: 0.75rem;
-  --content-max-width: 80rem;
+  /* ---- terciario · cumplido y confirmación ---- */
+  --md-sys-color-tertiary: #41673D;
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #C2EEB9;
+  --md-sys-color-on-tertiary-container: #002203;
+
+  /* ---- pospuesto · rol propio del proyecto ---- */
+  --md-sys-color-postponed: #825500;
+  --md-sys-color-on-postponed: #FFFFFF;
+  --md-sys-color-postponed-container: #FFDDB2;
+  --md-sys-color-on-postponed-container: #291800;
+
+  /* ---- error · eliminación e irreversibilidad ---- */
+  --md-sys-color-error: #BA1A1A;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #FFDAD6;
+  --md-sys-color-on-error-container: #410002;
+
+  /* ---- superficies ---- */
+  --md-sys-color-surface: #F5FAFC;
+  --md-sys-color-on-surface: #171D1E;
+  --md-sys-color-surface-variant: #DBE4E7;
+  --md-sys-color-on-surface-variant: #3F484B;
+  --md-sys-color-surface-container-lowest: #FFFFFF;
+  --md-sys-color-surface-container-low: #EFF4F6;
+  --md-sys-color-surface-container: #E9EFF1;
+  --md-sys-color-surface-container-high: #E4E9EB;
+  --md-sys-color-surface-container-highest: #DEE3E5;
+
+  /* ---- contornos ---- */
+  --md-sys-color-outline: #6F797B;
+  --md-sys-color-outline-variant: #BFC8CB;
+  --md-sys-color-scrim: #000000;
+
+  /* ---- espaciado · rejilla base de 4 px ---- */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;  --sp-6: 24px;  --sp-8: 32px;  --sp-12: 48px;  --sp-16: 64px;
+
+  /* ---- radios ---- */
+  --r-xs: 4px; --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-2xl: 28px;
+
+  /* ---- marco de la aplicación web ---- */
+  --appbar-h: 64px;
+  --menu-w: 240px;
+  --page-margin: 32px;
+  --content-w: 1136px;
+
+  /* ---- elevación ---- */
+  --e-1: 0 1px 3px rgba(0,0,0,.12);
+  --e-2: 0 2px 6px rgba(0,0,0,.14);
+  --e-3: 0 3px 8px rgba(0,0,0,.18);
+  --e-4: 0 6px 16px rgba(0,0,0,.22);
 }

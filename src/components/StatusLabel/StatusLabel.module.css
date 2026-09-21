@@ -1,0 +1,47 @@
+/* StatusLabel · ESPECIFICACION_WEB.md § 4.11
+   Alto 32 · radio 16 · relleno lateral 12 · icono 16 con separación 6 · texto label-medium.
+   Nunca sólo color: todos llevan icono y palabra, para que se lean en blanco y negro. */
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 var(--sp-3);
+  border-radius: var(--r-lg);
+  white-space: nowrap;
+}
+
+.pendiente,
+.sincronizado {
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.critica {
+  background: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+}
+
+.completada,
+.alDia,
+.activa {
+  background: var(--md-sys-color-tertiary-container);
+  color: var(--md-sys-color-on-tertiary-container);
+}
+
+.reprogramada {
+  background: var(--md-sys-color-postponed-container);
+  color: var(--md-sys-color-on-postponed-container);
+}
+
+.noRealizada {
+  background: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+}
+
+.sinUso,
+.noConectado {
+  background: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface-variant);
+}

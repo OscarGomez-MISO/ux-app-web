@@ -1,0 +1,39 @@
+/* Table · ESPECIFICACION_WEB.md § 4.15 */
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.encabezado {
+  height: 40px;
+  padding: 0 var(--sp-4);
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: inherit;
+  border-bottom: 1px solid var(--md-sys-color-outline);
+}
+
+.celda {
+  height: 56px;
+  padding: 0 var(--sp-4);
+  color: var(--md-sys-color-on-surface);
+}
+
+.fila {
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  transition: background-color 120ms ease-out;
+}
+
+.fila:last-child {
+  border-bottom: none;
+}
+
+.fila:hover {
+  background: var(--md-sys-color-surface-container-low);
+}
+
+/* Las celdas numéricas van a la derecha; el resto a la izquierda */
+.derecha {
+  text-align: right;
+}

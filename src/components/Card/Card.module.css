@@ -1,0 +1,35 @@
+/* Card · ESPECIFICACION_WEB.md § 4.12 · radio 12 en las tres variantes */
+
+.card {
+  border-radius: var(--r-md);
+}
+
+.tarjeta {
+  padding: var(--sp-6);
+  background: var(--md-sys-color-surface-container-lowest);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: var(--e-1);
+}
+
+.superficie {
+  padding: var(--sp-6);
+  background: var(--md-sys-color-surface-container);
+}
+
+.aviso {
+  padding: var(--sp-4) var(--sp-6);
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* ---- tono="error" ---- */
+.error.tarjeta,
+.error.superficie,
+.error.aviso {
+  background: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+}
+
+.error.tarjeta {
+  border-color: var(--md-sys-color-error-container);
+}

@@ -1,0 +1,30 @@
+/* Rejilla y marco · 12 columnas de 93 px con canal de 24 sobre lienzo de 1440 */
+
+.page {
+  margin-left: var(--menu-w);
+  margin-top: var(--appbar-h);
+  padding: var(--sp-8);
+  min-height: calc(100vh - var(--appbar-h));
+  background: var(--md-sys-color-surface);
+}
+
+.content {
+  max-width: var(--content-w);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sp-6);
+}
+
+/* Adaptación: no es responsive, pero no se puede romper.
+   Los campos no se estiran en un monitor grande. */
+.campo { max-width: 496px; }
+
+@media (max-width: 1279px) {
+  .page { padding: var(--sp-6); }
+}

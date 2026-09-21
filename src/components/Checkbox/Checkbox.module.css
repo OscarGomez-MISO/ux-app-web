@@ -1,0 +1,80 @@
+/* Checkbox · ESPECIFICACION_WEB.md § 4.8
+   Cuadro 20 × 20, radio 4, borde 2 px. Área tocable 48 × 48 por relleno. */
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  cursor: pointer;
+}
+
+/* El input real se mantiene: recibe el foco y el teclado */
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.area {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: -14px; /* el cuadro ocupa 20; el área tocable no descoloca la fila */
+}
+
+.cuadro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--md-sys-color-outline);
+  border-radius: var(--r-xs);
+  color: var(--md-sys-color-on-primary);
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
+}
+
+.marcado {
+  background: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+}
+
+/* La marca y la barra entran con scale(.6) → 1 + opacidad */
+.marca {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: transform 150ms ease-out, opacity 150ms ease-out;
+}
+
+.marcado .marca {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.barra {
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+}
+
+.input:focus-visible + .area .cuadro {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+.texto {
+  color: var(--md-sys-color-on-surface);
+}
+
+.deshabilitado {
+  opacity: 0.38;
+  cursor: default;
+}

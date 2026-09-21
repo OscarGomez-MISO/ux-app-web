@@ -1,0 +1,25 @@
+/* Escala tipográfica · IBM Plex Sans · 13 estilos de Material 3
+   Instalar con:  npm i @fontsource/ibm-plex-sans
+   Importar en main.jsx:
+     import '@fontsource/ibm-plex-sans/400.css';
+     import '@fontsource/ibm-plex-sans/500.css';
+     import '@fontsource/ibm-plex-sans/600.css';
+     import '@fontsource/ibm-plex-sans/700.css';
+   NO EDITAR: ningún texto del proyecto usa un tamaño fuera de estos trece. */
+
+.display-small   { font: 600 36px/44px 'IBM Plex Sans', system-ui, sans-serif; }
+.headline-large  { font: 600 32px/40px 'IBM Plex Sans', system-ui, sans-serif; }
+.headline-medium { font: 600 28px/36px 'IBM Plex Sans', system-ui, sans-serif; }
+.headline-small  { font: 600 24px/32px 'IBM Plex Sans', system-ui, sans-serif; }
+.title-large     { font: 600 22px/28px 'IBM Plex Sans', system-ui, sans-serif; }
+.title-medium    { font: 500 16px/24px 'IBM Plex Sans', system-ui, sans-serif; }
+.title-small     { font: 500 14px/20px 'IBM Plex Sans', system-ui, sans-serif; }
+.body-large      { font: 400 16px/24px 'IBM Plex Sans', system-ui, sans-serif; }
+.body-medium     { font: 400 14px/20px 'IBM Plex Sans', system-ui, sans-serif; }
+.body-small      { font: 400 12px/16px 'IBM Plex Sans', system-ui, sans-serif; }
+.label-large     { font: 500 14px/20px 'IBM Plex Sans', system-ui, sans-serif; }
+.label-medium    { font: 500 12px/16px 'IBM Plex Sans', system-ui, sans-serif; }
+.label-small     { font: 500 11px/16px 'IBM Plex Sans', system-ui, sans-serif; letter-spacing: .5px; }
+
+/* Rótulo de sección en versales: .label-small + esta clase */
+.versales { text-transform: uppercase; }

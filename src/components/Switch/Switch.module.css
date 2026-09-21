@@ -1,0 +1,62 @@
+/* Switch · ESPECIFICACION_WEB.md § 4.9
+   Pista 52 × 32, radio 16. Pulgar de 24 con 4 de margen. Área tocable 48 × 48. */
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 48px; /* área tocable; la pista mide 32 */
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pista {
+  position: relative;
+  width: 52px;
+  height: 32px;
+  border-radius: var(--r-lg);
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
+}
+
+.apagado {
+  background: var(--md-sys-color-surface-container-highest);
+  border: 2px solid var(--md-sys-color-outline);
+}
+
+.encendido {
+  background: var(--md-sys-color-primary);
+  border: 2px solid var(--md-sys-color-primary);
+}
+
+.pulgar {
+  position: absolute;
+  top: 2px; /* 4 de margen contando el borde de 2 */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: transform 150ms ease-out, background-color 150ms ease-out;
+}
+
+.apagado .pulgar {
+  background: var(--md-sys-color-outline);
+  transform: translateX(2px);
+}
+
+.encendido .pulgar {
+  background: var(--md-sys-color-on-primary);
+  transform: translateX(22px);
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+  border-radius: var(--r-lg);
+}
+
+.control:disabled {
+  opacity: 0.38;
+  cursor: default;
+}

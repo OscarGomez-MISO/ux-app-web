@@ -1,0 +1,32 @@
+/* Chip · ESPECIFICACION_WEB.md § 4.10
+   Alto 32, radio 16, relleno lateral 16. La separación de 8 entre chips la pone la pantalla. */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 var(--sp-4);
+  border-radius: var(--r-lg);
+  /* Borde transparente en el seleccionado: así no cambia de tamaño al activarse */
+  border: 1px solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 120ms ease-out, border-color 120ms ease-out,
+    color 120ms ease-out;
+}
+
+.normal {
+  background: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  border-color: var(--md-sys-color-outline);
+}
+
+.seleccionado {
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}

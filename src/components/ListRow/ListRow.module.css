@@ -1,0 +1,55 @@
+/* ListRow · ESPECIFICACION_WEB.md § 4.13
+   Fila de 56 o 64 de alto, relleno lateral 16, separador 1 px entre filas. */
+
+.fila {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  height: 56px;
+  padding: 0 var(--sp-4);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  transition: background-color 120ms ease-out;
+}
+
+.alto64 {
+  height: 64px;
+}
+
+.fila:last-child {
+  border-bottom: none;
+}
+
+.fila:hover {
+  background: var(--md-sys-color-surface-container-low);
+}
+
+/* Icono o casilla a la izquierda: el hueco de 16 lo pone el gap de .fila */
+.delante {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.texto {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--sp-1);
+  min-width: 0;
+}
+
+.titulo {
+  color: var(--md-sys-color-on-surface);
+}
+
+.desc {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.detras {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--sp-2);
+}

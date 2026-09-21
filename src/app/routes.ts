@@ -1,12 +1,12 @@
 export const appRoutes = {
   dashboard: '/',
   planning: '/planificacion',
-  createAlert: '/alertas/nueva',
+  createAlert: '/crear-alerta',
   routines: '/rutinas',
-  locations: '/ubicaciones',
+  locations: '/lugares',
   integrations: '/integraciones',
-  history: '/historial',
+  history: '/historico',
   cleanup: '/depuracion',
-  settings: '/configuracion',
+  settings: '/privacidad',
   templates: '/plantillas',
 } as const
