@@ -1,0 +1,92 @@
+/* Button · ESPECIFICACION_WEB.md § 4.5
+   Alto 40 · radio 20 · relleno lateral 24 · texto label-large (clase global de type.css) */
+
+.boton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  height: 40px;
+  padding: 0 var(--sp-6);
+  border: none;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 100ms ease-out;
+}
+
+/* Con icono: 18 px a la izquierda, separación 8, relleno izquierdo 20 */
+.conIcono {
+  padding-left: var(--sp-5);
+}
+
+/* Capa de estado al 8 %, del color del texto de cada tipo */
+.boton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 100ms ease-out;
+}
+
+.boton:hover::before {
+  opacity: 0.08;
+}
+
+.boton:active {
+  /* inset 0 2px 4px rgba(0,0,0,.18): scrim es #000000 */
+  box-shadow: inset 0 2px 4px color-mix(in srgb, var(--md-sys-color-scrim) 18%, transparent);
+}
+
+.boton:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+/* ---- tipos ---- */
+.primario {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.secundario {
+  background: transparent;
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.terciario {
+  background: transparent;
+  color: var(--md-sys-color-primary);
+}
+
+.destructivo {
+  background: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+}
+
+/* ---- deshabilitado: opacidad .38, sin hover ---- */
+.boton:disabled {
+  opacity: 0.38;
+  cursor: default;
+}
+
+/* ---- inerte: lleva a una pantalla fuera de las diez (regla 7) ---- */
+.boton:disabled::before,
+.boton[aria-disabled='true']::before {
+  opacity: 0;
+}
+
+.boton:disabled:active,
+.boton[aria-disabled='true']:active {
+  box-shadow: none;
+}
+
+.boton[aria-disabled='true'] {
+  cursor: default;
+}
