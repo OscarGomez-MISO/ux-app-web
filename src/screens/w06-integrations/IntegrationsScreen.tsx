@@ -75,7 +75,10 @@ export function IntegrationsScreen() {
                 <StatusLabel estado={estado} />
               </span>
               <div className={styles.acciones}>
-                <Button tipo="terciario" onClick={() => alternar(indice)}>
+                <Button
+                  tipo={conectado ? 'secundario' : 'primario'}
+                  onClick={() => alternar(indice)}
+                >
                   {conectado ? 'Desconectar' : 'Conectar'}
                 </Button>
                 <Button tipo="terciario" to={appRoutes.settings}>
@@ -96,7 +99,7 @@ export function IntegrationsScreen() {
         </Button>
       </div>
 
-      <Card tipo="tarjeta">
+      <Card tipo="superficie">
         <div className={styles.permisosCabecera}>
           <h2 className="title-large">{permisos.titulo}</h2>
           <Link

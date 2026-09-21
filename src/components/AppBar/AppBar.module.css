@@ -1,0 +1,51 @@
+/* AppBar · ESPECIFICACION_WEB.md § 4.2 · 64 de alto, fija arriba, elevación 2 */
+
+.barra {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: var(--appbar-h);
+  padding: 0 var(--sp-6);
+  background: var(--md-sys-color-surface-container-lowest);
+  box-shadow: var(--e-2);
+}
+
+.marca {
+  color: var(--md-sys-color-primary);
+}
+
+/* El buscador se centra; los dos controles de la derecha van al final */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 240px;
+  height: 36px;
+  margin: 0 auto;
+  padding: 0 var(--sp-4);
+  color: var(--md-sys-color-on-surface-variant);
+  background: var(--md-sys-color-surface-container);
+  border: none;
+  border-radius: var(--r-xl);
+}
+
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+}
+
+/* Inertes: sus pantallas no entran en las diez */
+.accion {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--md-sys-color-on-surface-variant);
+  background: none;
+  border: none;
+  cursor: default;
+}

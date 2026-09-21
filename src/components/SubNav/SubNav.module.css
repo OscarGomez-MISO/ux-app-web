@@ -1,0 +1,33 @@
+/* SubNav · ESPECIFICACION_WEB.md § 4.4 · alto 44, bajo el título.
+   CW-02: sin esta barra hay que llegar a Rutinas por el menú lateral. */
+
+.barra {
+  display: flex;
+  gap: var(--sp-8);
+  align-items: stretch;
+  height: 44px;
+}
+
+.pestana {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--md-sys-color-on-surface-variant);
+  text-decoration: none;
+}
+
+/* Activa: subrayado de 2 px pegado abajo, del ancho del texto */
+.activa {
+  color: var(--md-sys-color-primary);
+  cursor: default;
+}
+
+.activa::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--md-sys-color-primary);
+}
