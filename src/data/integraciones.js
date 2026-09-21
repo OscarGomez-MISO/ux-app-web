@@ -6,11 +6,11 @@ export const entradilla =
   'Conecta los servicios que ya usas. La alerta llega igual aunque no conectes ninguno.';
 
 export const servicios = [
-  { icono: 'notification_important', nombre: 'Teléfono',             detalle: 'Android 14 · este dispositivo', estado: 'sincronizado', acciones: ['Desconectar', 'Ver permisos'] },
+  { icono: 'notification_important', nombre: 'Teléfono',             detalle: 'Android 14 · este dispositivo', estado: 'sincronizado', acciones: ['Desconectar'] },
   { icono: 'schedule',               nombre: 'Reloj conectado',      detalle: 'Galaxy Watch 6',                estado: 'sincronizado', acciones: ['Desconectar'] },
   { icono: 'calendar_today',         nombre: 'Calendario',           detalle: 'Google Calendar',               estado: 'sincronizado', acciones: ['Desconectar'] },
   { icono: 'notes',                  nombre: 'Correo',               detalle: 'Gmail',                         estado: 'sincronizado', acciones: ['Desconectar'] },
-  { icono: 'task_alt',               nombre: 'Aplicación de tareas', detalle: 'Google Tasks',                  estado: 'sinConectar',  acciones: ['Conectar'] },
+  { icono: 'task_alt',               nombre: 'Aplicación de tareas', detalle: 'Google Tasks',                  estado: 'noConectado',  acciones: ['Conectar'] },
   { icono: 'sync',                   nombre: 'Copia en la nube',     detalle: 'Google Drive',                  estado: 'alDia',        acciones: ['Desconectar'] },
 ];
 
