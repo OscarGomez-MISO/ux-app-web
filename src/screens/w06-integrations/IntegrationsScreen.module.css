@@ -35,23 +35,31 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 
+/* El estado va a +60 del nombre; el detalle ocupa 16 desde +24 */
 .estado {
-  margin-top: var(--sp-4);
+  margin-top: var(--sp-5);
 }
 
-/* Dos acciones al pie: la del servicio y Ver permisos */
+/* Dos acciones al pie, repartidas a los extremos de la ficha */
 .acciones {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: var(--sp-2);
+  /* `auto` pega las acciones abajo cuando sobra alto; el `padding` garantiza
+     la separación con el estado cuando no sobra. */
   margin-top: auto;
+  padding-top: var(--sp-6);
 }
 
-/* Fila de sincronización · 1136 × 48 */
+/* Fila de sincronización · 1136 × 48, con separador encima */
 .sincronizacion {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 48px;
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .sincronizacionTexto {
@@ -75,6 +83,12 @@
   grid-template-columns: repeat(4, 1fr);
   gap: var(--sp-6);
   margin-top: var(--sp-6);
+}
+
+/* Separador vertical entre columnas, como en el mockup */
+.permisosColumnas > * + * {
+  padding-left: var(--sp-6);
+  border-left: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .permisoServicio {

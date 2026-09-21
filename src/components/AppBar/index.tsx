@@ -1,27 +1,32 @@
-// TAPÓN · lo escribe Óscar (§ 4.2), borrar al mergear.
-// Sólo sostiene la geometría del marco: 64 de alto, fijo arriba.
+import Icon from '../Icon'
 import { marca } from '../../data/textos'
+import styles from './AppBar.module.css'
 
+/**
+ * Barra superior · § 4.2. Idéntica en las diez pantallas.
+ * El buscador, las notificaciones y la cuenta quedan inertes: sus pantallas
+ * no entran en las diez.
+ */
 export default function AppBar() {
   return (
-    <header
-      className="title-large"
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 2,
-        display: 'flex',
-        alignItems: 'center',
-        height: 'var(--appbar-h)',
-        padding: '0 var(--sp-6)',
-        color: 'var(--md-sys-color-primary)',
-        background: 'var(--md-sys-color-surface-container-lowest)',
-        boxShadow: 'var(--e-2)',
-      }}
-    >
-      {marca}
+    <header className={styles.barra}>
+      <span className={`title-large ${styles.marca}`}>{marca}</span>
+
+      <div className={`body-medium ${styles.buscador}`} aria-hidden="true">
+        <Icon nombre="search" size={18} />
+        Buscar
+      </div>
+
+      <div className={styles.acciones}>
+        <span className={`body-medium ${styles.accion}`} aria-disabled="true">
+          <Icon nombre="notifications" size={24} />
+          Notificaciones
+        </span>
+        <span className={`body-medium ${styles.accion}`} aria-disabled="true">
+          <Icon nombre="account_circle" size={24} />
+          Mi cuenta
+        </span>
+      </div>
     </header>
   )
 }

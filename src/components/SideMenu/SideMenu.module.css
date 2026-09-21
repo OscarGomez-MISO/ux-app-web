@@ -1,0 +1,44 @@
+/* SideMenu · ESPECIFICACION_WEB.md § 4.3 · 240 de ancho desde y=64 */
+
+.menu {
+  position: fixed;
+  top: var(--appbar-h);
+  bottom: 0;
+  left: 0;
+  width: var(--menu-w);
+  padding-top: var(--sp-6);
+  background: var(--md-sys-color-surface-container-low);
+}
+
+/* Entradas de 240 × 44 con paso 48: la separación son los 4 que faltan */
+.entrada {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+  height: 44px;
+  margin-bottom: var(--sp-1);
+  padding: 0 var(--sp-4);
+  color: var(--md-sys-color-on-surface-variant);
+  text-decoration: none;
+}
+
+.entrada:hover {
+  background: var(--md-sys-color-surface-container);
+}
+
+/* Activa: 232 de ancho, esquina derecha redondeada, y no navega */
+.activa,
+.activa:hover {
+  width: 232px;
+  color: var(--md-sys-color-on-secondary-container);
+  background: var(--md-sys-color-secondary-container);
+  border-radius: 0 var(--r-xl) var(--r-xl) 0;
+  cursor: default;
+}
+
+.pie {
+  position: absolute;
+  bottom: var(--sp-6);
+  left: var(--sp-6);
+  color: var(--md-sys-color-on-surface-variant);
+}
