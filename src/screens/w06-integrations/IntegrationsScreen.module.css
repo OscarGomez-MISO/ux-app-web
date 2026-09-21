@@ -1,0 +1,100 @@
+/* W06 · Integraciones y dispositivos · § 5.6 */
+
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.entradilla {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Seis fichas de 368 × 200 en rejilla de 3 × 2, canal 16 */
+.fichas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+.ficha {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.nombre {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--md-sys-color-on-surface);
+}
+
+.detalle {
+  margin-top: var(--sp-6);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.estado {
+  margin-top: var(--sp-4);
+}
+
+/* Dos acciones al pie: la del servicio y Ver permisos */
+.acciones {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: auto;
+}
+
+/* Fila de sincronización · 1136 × 48 */
+.sincronizacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+}
+
+.sincronizacionTexto {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Card «Qué permiso pide cada conexión» */
+.permisosCabecera {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-6);
+}
+
+.permisosNota {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.permisosColumnas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-6);
+  margin-top: var(--sp-6);
+}
+
+.permisoServicio {
+  color: var(--md-sys-color-on-surface);
+}
+
+.permisoPide {
+  margin-top: var(--sp-1);
+  color: var(--md-sys-color-on-surface);
+}
+
+.permisoNoHace {
+  margin-top: var(--sp-1);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.notas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  margin-top: var(--sp-6);
+  color: var(--md-sys-color-on-surface-variant);
+}
