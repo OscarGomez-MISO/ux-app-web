@@ -1,0 +1,51 @@
+/* W09 · Privacidad y permisos · § 5.9 */
+
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.entradilla {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Zona de eliminación · borde 1 px error */
+.zona {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+  min-height: 96px;
+  border: 1px solid var(--md-sys-color-error);
+}
+
+.zonaTextos {
+  flex: 1;
+}
+
+.zonaTitulo {
+  color: var(--md-sys-color-on-error-container);
+}
+
+.zonaDesc {
+  margin-top: var(--sp-1);
+  color: var(--md-sys-color-on-error-container);
+}
+
+/* Card de retención */
+.retencionCabecera {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-4);
+}
+
+.retencionNota {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.plazo,
+.nota {
+  color: var(--md-sys-color-on-surface-variant);
+}
