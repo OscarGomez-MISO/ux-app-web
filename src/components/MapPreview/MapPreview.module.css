@@ -1,0 +1,29 @@
+.mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 360px;
+  color: var(--md-sys-color-on-surface-variant);
+  background: var(--md-sys-color-surface-container-high);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--r-md);
+}
+
+.icono {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  color: var(--md-sys-color-primary);
+  place-items: center;
+}
+
+.icono svg {
+  width: 48px;
+  height: 48px;
+}
+
+.mapa p {
+  margin-top: var(--sp-4);
+}

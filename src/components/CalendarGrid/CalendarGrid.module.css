@@ -2,8 +2,7 @@
 
 .calendario {
   position: relative;
-  flex: 0 0 752px;
-  width: 752px;
+  width: 100%;
   height: 520px;
   overflow: hidden;
   background: var(--md-sys-color-surface);
@@ -13,14 +12,15 @@
 
 .cabecera {
   display: grid;
-  grid-template-columns: repeat(7, 96px);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   align-items: center;
   height: 80px;
   margin-left: 72px;
+  padding-right: var(--sp-2);
 }
 
 .dia {
-  width: 88px;
+  width: calc(100% - var(--sp-2));
   height: 32px;
   padding: 0;
   color: var(--md-sys-color-on-surface-variant);
@@ -61,15 +61,15 @@
 .rejilla {
   position: absolute;
   top: 0;
+  right: var(--sp-2);
   left: 48px;
-  width: 672px;
   height: 392px;
 }
 
 .linea {
   position: absolute;
   left: 0;
-  width: 640px;
+  width: 100%;
   height: 1px;
   background: var(--md-sys-color-outline-variant);
 }
@@ -78,7 +78,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  width: 88px;
+  width: calc((100% / 7) - var(--sp-2));
   height: 48px;
   padding: 0 var(--sp-2);
   overflow: hidden;

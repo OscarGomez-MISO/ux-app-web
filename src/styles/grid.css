@@ -9,10 +9,11 @@
 }
 
 .content {
-  max-width: var(--content-w);
   display: flex;
   flex-direction: column;
   gap: var(--sp-6);
+  width: min(100%, 1600px);
+  margin-inline: auto;
 }
 
 .grid-12 {
@@ -21,8 +22,7 @@
   gap: var(--sp-6);
 }
 
-/* Adaptación: no es responsive, pero no se puede romper.
-   Los campos no se estiran en un monitor grande. */
+/* Los campos conservan una longitud de lectura cómoda. */
 .campo { max-width: 496px; }
 
 @media (max-width: 1279px) {

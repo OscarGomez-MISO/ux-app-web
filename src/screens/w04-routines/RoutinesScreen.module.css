@@ -12,7 +12,7 @@
 
 .paneles {
   display: grid;
-  grid-template-columns: 656px 456px;
+  grid-template-columns: minmax(560px, 1.44fr) minmax(400px, 1fr);
   gap: var(--sp-6);
   margin-top: var(--sp-12);
 }
@@ -89,7 +89,7 @@
 
 .dias {
   display: grid;
-  grid-template-columns: repeat(7, 32px);
+  grid-template-columns: repeat(7, minmax(32px, 1fr));
   gap: var(--sp-6);
   margin-top: var(--sp-6);
 }
@@ -198,7 +198,7 @@
 
 @media (max-width: 1279px) {
   .paneles {
-    grid-template-columns: minmax(0, 656px) 424px;
+    grid-template-columns: minmax(0, 1.44fr) minmax(360px, 1fr);
   }
 
   .dias {
