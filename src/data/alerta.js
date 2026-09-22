@@ -45,5 +45,69 @@ export const canales = [
 
 export const opciones = {
   repeticion: ['Una vez', 'Todos los días', 'Cada 6 horas', 'Días laborales', 'Personalizada'],
-  criticidad: ['Normal', 'Importante', 'Crítica'],
+  criticidad: ['Normal', 'Alta', 'Crítica'],
 };
+
+export const textosFormulario = {
+  seccionProgramacion: 'Qué y cuándo',
+  seccionContexto: 'Contexto y aviso',
+  titulo: 'Título',
+  queHacer: '¿Qué debes hacer?',
+  disparador: 'Disparador',
+  condicional: 'SE MUESTRA SEGÚN EL DISPARADOR ELEGIDO',
+  fecha: 'Fecha',
+  hora: 'Hora',
+  lugar: 'Lugar',
+  mensajeGuiado: 'Mensaje guiado',
+  listaPasos: 'Lista de pasos',
+  canales: 'Canales de aviso',
+  repeticion: 'Repetición',
+  criticidad: 'Criticidad',
+  guardar: 'Guardar',
+  cancelar: 'Cancelar',
+  vistaPrevia: 'Vista previa de la alerta en el teléfono',
+  errorTitulo: 'El título es obligatorio',
+  pendiente: 'Pendiente',
+};
+
+export const selectorFecha = {
+  titulo: 'Seleccionar fecha',
+  mes: 'Mayo 2026',
+  meses: [
+    'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
+  ],
+  diasSemana: ['L', 'M', 'X', 'J', 'V', 'S', 'D'],
+  anterior: 'Mes anterior',
+  siguiente: 'Mes siguiente',
+  cancelar: 'Cancelar',
+  aceptar: 'Aceptar',
+};
+
+export const selectorHora = {
+  titulo: 'Seleccionar hora',
+  valor: '6:30',
+  periodo: 'p. m.',
+  cambiarMinutos: 'Cambiar minutos',
+  cancelar: 'Cancelar',
+  aceptar: 'Aceptar',
+};
+
+export const ubicacion = {
+  nombre: 'Casa',
+  regla: 'Al llegar a Casa',
+  detalle: 'Permanencia mínima: 5 minutos',
+  accion: 'Gestionar lugares...',
+};
+
+export const confirmacionDescartar = {
+  titulo: '¿Descartar los cambios?',
+  detalle:
+    'La alerta «Pagar administración» no se ha guardado. Si sales ahora se pierde lo que llevas escrito.',
+  nota: 'Guardar no la activa todavía: puedes seguir ajustándola después.',
+  seguir: 'Seguir editando',
+  descartar: 'Descartar',
+};
+
+export const guardado = 'Alerta creada para el 15/05 a las 6:00 p. m.';
+export const nuevoPaso = 'Enviar el comprobante por correo';
