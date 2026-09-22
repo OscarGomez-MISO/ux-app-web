@@ -1,0 +1,334 @@
+/* W03 · Crear alerta · ESPECIFICACION_WEB.md § 5.3 */
+
+.pantalla {
+  width: 100%;
+  padding-bottom: var(--sp-8);
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 544px 544px;
+  gap: var(--sp-6);
+  align-items: start;
+  margin-top: var(--sp-5);
+}
+
+.formCard {
+  width: 544px;
+  height: 580px;
+  overflow: visible;
+  background: var(--md-sys-color-surface);
+  border-color: var(--md-sys-color-outline);
+  box-shadow: none;
+}
+
+.titleField,
+.messageField {
+  margin-top: var(--sp-3);
+}
+
+.todoField {
+  margin-top: var(--sp-4);
+}
+
+.triggerField {
+  z-index: 20;
+  margin-top: var(--sp-2);
+}
+
+.condicional {
+  margin-top: var(--sp-4);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.fechaHora {
+  display: grid;
+  grid-template-columns: repeat(2, 232px);
+  gap: var(--sp-8);
+  margin-top: var(--sp-5);
+}
+
+.placeField {
+  margin-top: var(--sp-2);
+}
+
+.reglaLugar {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: var(--sp-3);
+  align-items: center;
+  height: 40px;
+  margin-top: var(--sp-2);
+  padding: 0 var(--sp-3);
+  color: var(--md-sys-color-primary);
+  border: 2px solid var(--md-sys-color-primary);
+  border-radius: var(--r-sm);
+}
+
+.reglaLugar p {
+  color: var(--md-sys-color-on-surface);
+}
+
+.detalleLugar {
+  color: var(--md-sys-color-on-surface-variant) !important;
+}
+
+.gestionar {
+  text-decoration: none;
+}
+
+.stepsLabel {
+  margin-top: var(--sp-5);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  padding: 0 var(--sp-4);
+  color: var(--md-sys-color-on-surface);
+  text-align: left;
+  background: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--r-sm);
+}
+
+button.step:hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+.channelsLabel {
+  margin-top: var(--sp-8);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.channelsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: var(--sp-4);
+  margin-top: var(--sp-4);
+}
+
+.bottomDropdowns {
+  display: grid;
+  grid-template-columns: repeat(2, 232px);
+  gap: var(--sp-8);
+  margin-top: var(--sp-2);
+}
+
+.rightCardExtended {
+  height: 628px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sp-3);
+  height: 40px;
+  margin-top: var(--sp-5);
+  padding-right: 52px;
+}
+
+.actions > * {
+  min-width: 108px;
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: 304px 1fr;
+  align-content: start;
+  min-height: 108px;
+  margin-top: 0;
+  padding-top: var(--sp-6);
+  color: var(--md-sys-color-on-secondary-container);
+  background: var(--md-sys-color-secondary-container);
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--md-sys-color-scrim) 32%, transparent);
+}
+
+.dialogo {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-8);
+  background: var(--md-sys-color-surface-container-lowest);
+  box-shadow: var(--e-4);
+}
+
+.dialogoFecha {
+  width: 448px;
+  min-height: 548px;
+  border-radius: var(--r-2xl);
+}
+
+.mesSelector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--sp-8);
+}
+
+.mesAcciones {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.mesAcciones button {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  place-items: center;
+}
+
+.mesAcciones button:hover {
+  background: var(--md-sys-color-surface-container-low);
+}
+
+.calendarioMes {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: var(--sp-1) var(--sp-3);
+  justify-content: center;
+  margin-top: var(--sp-3);
+}
+
+.diaSemana,
+.diaMes {
+  display: grid;
+  width: 40px;
+  height: 36px;
+  padding: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 50%;
+  place-items: center;
+}
+
+.diaMes:hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+.diaMesSeleccionado,
+.diaMesSeleccionado:hover {
+  color: var(--md-sys-color-on-primary);
+  background: var(--md-sys-color-primary);
+}
+
+.dialogoAcciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sp-3);
+  margin-top: auto;
+}
+
+.dialogoHora {
+  width: 416px;
+  height: 504px;
+  border-radius: var(--r-2xl);
+}
+
+.horaElegida {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: var(--sp-3);
+}
+
+.periodo {
+  padding: var(--sp-2);
+  color: var(--md-sys-color-primary);
+  border-radius: var(--r-sm);
+}
+
+.reloj {
+  position: relative;
+  display: grid;
+  width: 208px;
+  height: 208px;
+  margin: var(--sp-8) auto 0;
+  color: var(--md-sys-color-primary);
+  background: var(--md-sys-color-surface-container-low);
+  border-radius: 50%;
+  place-items: center;
+}
+
+.puntoReloj {
+  position: absolute;
+  top: 28px;
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  background: var(--md-sys-color-primary);
+  border-radius: 50%;
+}
+
+.manecilla {
+  position: absolute;
+  top: 44px;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 60px;
+  background: var(--md-sys-color-primary);
+  transform-origin: bottom;
+}
+
+.enPunto {
+  transform: rotate(180deg);
+}
+
+.dialogoDescartar {
+  width: 560px;
+  min-height: 248px;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--r-sm);
+}
+
+.descartarDetalle {
+  margin-top: var(--sp-4);
+}
+
+.descartarNota {
+  margin-top: var(--sp-3);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.snackbar {
+  position: fixed;
+  right: 64px;
+  bottom: var(--sp-8);
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  width: 448px;
+  min-height: 48px;
+  padding: 0 var(--sp-6);
+  color: var(--md-sys-color-surface);
+  background: var(--md-sys-color-on-surface);
+  border-radius: var(--r-xs);
+  box-shadow: var(--e-3);
+}
+
+@media (max-width: 1279px) {
+  .formulario {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .formCard {
+    width: 100%;
+  }
+}

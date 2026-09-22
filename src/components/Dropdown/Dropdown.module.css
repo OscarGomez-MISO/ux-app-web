@@ -1,0 +1,105 @@
+/* Dropdown · ESPECIFICACION_WEB.md § 4.7 */
+
+.campo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  width: 100%;
+}
+
+.etiqueta {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--sp-4);
+  color: var(--md-sys-color-on-surface);
+  text-align: left;
+  background: var(--md-sys-color-surface-container-lowest);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--r-md);
+}
+
+.control:focus-visible,
+.control[aria-expanded='true'] {
+  border-color: var(--md-sys-color-primary);
+}
+
+.control[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+
+.despliegue {
+  position: absolute;
+  top: calc(100% + var(--sp-2));
+  right: 0;
+  left: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    grid-template-rows 160ms ease-out,
+    opacity 160ms ease-out;
+}
+
+.abierto {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.recorte {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.lista {
+  padding: var(--sp-1) 0;
+  overflow: hidden;
+  background: var(--md-sys-color-surface-container-lowest);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--r-sm);
+  box-shadow: var(--e-2);
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--sp-3);
+  color: var(--md-sys-color-on-surface);
+  text-align: left;
+}
+
+.opcion:hover {
+  background: var(--md-sys-color-surface-container-low);
+}
+
+.seleccionada {
+  color: var(--md-sys-color-on-primary-container);
+  background: var(--md-sys-color-primary-container);
+}
+
+.conDescripcion {
+  min-height: 56px;
+}
+
+.textoOpcion {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.descripcion {
+  color: var(--md-sys-color-on-surface-variant);
+}
