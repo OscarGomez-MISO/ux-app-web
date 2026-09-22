@@ -115,6 +115,7 @@ export function CleanupScreen() {
           <Button
             key={accion}
             tipo={accion === 'Eliminar' ? 'destructivo' : 'secundario'}
+            aria-disabled="true"
           >
             {accion}
           </Button>
