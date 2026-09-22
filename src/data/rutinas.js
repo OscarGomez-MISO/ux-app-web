@@ -18,5 +18,13 @@ export const titulos = {
   rutinas: 'Rutinas',
   calendario: 'Calendario de aplicación',
   excepciones: 'Excepciones y suspensiones',
+  excepcionAnadida: 'Excepción añadida',
   agregar: 'Agregar excepción',
+  editar: 'Rutina en edición',
+  editarAyuda: 'Los cambios se aplicarán a alertas futuras.',
+  guardar: 'Guardar cambios',
+  eliminar: 'Eliminar esta rutina',
+  vacio: 'Aún no tienes rutinas',
+  vacioAyuda: 'Crea una rutina para repetir alertas sin configurarlas una por una.',
+  nueva: 'Nueva rutina',
 };

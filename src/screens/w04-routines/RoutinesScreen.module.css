@@ -1,0 +1,207 @@
+/* W04 · Rutinas, recurrencias y excepciones · ESPECIFICACION_WEB.md § 5.4 */
+
+.pantalla {
+  width: 100%;
+  padding-bottom: var(--sp-8);
+}
+
+.subnav {
+  margin-top: var(--sp-2);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.paneles {
+  display: grid;
+  grid-template-columns: 656px 456px;
+  gap: var(--sp-6);
+  margin-top: var(--sp-12);
+}
+
+.listaRutinas,
+.calendario {
+  width: 100%;
+  height: 360px;
+}
+
+.listaRutinas {
+  position: relative;
+  padding: var(--sp-6);
+  background: var(--md-sys-color-surface-container-low);
+}
+
+.filasRutinas {
+  margin-top: var(--sp-2);
+}
+
+.rutina {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-align: left;
+  border-radius: var(--r-sm);
+}
+
+.rutina:hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+.filaRutina {
+  height: 80px;
+  padding: 0;
+  border-bottom: 0;
+  background: transparent !important;
+}
+
+.filaRutina > :first-child {
+  color: var(--md-sys-color-primary);
+}
+
+.filaRutina > :last-child > span {
+  min-width: 144px;
+  justify-content: flex-start;
+}
+
+.estadoActivo > :last-child > span {
+  background: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.eliminar {
+  position: absolute;
+  bottom: var(--sp-3);
+  left: var(--sp-6);
+  height: 40px;
+  padding: 0 var(--sp-2);
+  color: var(--md-sys-color-error);
+  border-radius: var(--r-xl);
+}
+
+.eliminar:hover {
+  background: var(--md-sys-color-error-container);
+}
+
+.calendario {
+  padding: var(--sp-6);
+  background: var(--md-sys-color-surface);
+  border-color: var(--md-sys-color-outline);
+  box-shadow: none;
+}
+
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 32px);
+  gap: var(--sp-6);
+  margin-top: var(--sp-6);
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  align-items: center;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.selectorDia {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: var(--md-sys-color-on-secondary-container);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--r-sm);
+  place-items: center;
+}
+
+.selectorDia:not(:disabled):hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+.selectorDiaActivo,
+.selectorDiaActivo:not(:disabled):hover {
+  background: var(--md-sys-color-secondary-container);
+}
+
+.selectorDia:disabled {
+  cursor: default;
+}
+
+.excepciones {
+  position: relative;
+  width: 100%;
+  height: 184px;
+  margin-top: 40px;
+  padding: var(--sp-6);
+  background: var(--md-sys-color-surface);
+  border-color: var(--md-sys-color-outline);
+  box-shadow: none;
+}
+
+.excepciones p {
+  margin-top: var(--sp-5);
+}
+
+.agregarExcepcion {
+  position: absolute;
+  top: 72px;
+  right: 44px;
+  min-width: 180px;
+}
+
+.avisoEdicion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 96px;
+  margin-top: var(--sp-8);
+  padding: var(--sp-6);
+  color: var(--md-sys-color-on-secondary-container);
+  background: var(--md-sys-color-secondary-container);
+}
+
+.avisoEdicion p {
+  margin-top: var(--sp-1);
+}
+
+.estadoVacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 360px;
+  margin-top: var(--sp-12);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.iconoVacio {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  transform: scale(1.5);
+}
+
+.estadoVacio h2 {
+  margin-top: var(--sp-4);
+  color: var(--md-sys-color-on-surface);
+}
+
+.estadoVacio p {
+  margin-top: var(--sp-2);
+}
+
+.estadoVacio a {
+  margin-top: var(--sp-8);
+}
+
+@media (max-width: 1279px) {
+  .paneles {
+    grid-template-columns: minmax(0, 656px) 424px;
+  }
+
+  .dias {
+    gap: var(--sp-5);
+  }
+}
