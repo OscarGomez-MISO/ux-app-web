@@ -1,0 +1,59 @@
+/* MetricCard · ESPECIFICACION_WEB.md § 4.14 */
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+  min-height: 128px;
+  padding: var(--sp-5) var(--sp-6);
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--r-md);
+}
+
+.compacta {
+  width: 200px;
+  min-height: 96px;
+  padding: var(--sp-4) var(--sp-6);
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.cifra {
+  color: inherit;
+}
+
+.descripcion {
+  margin-top: var(--sp-1);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.accion {
+  margin-top: auto;
+  padding-top: var(--sp-4);
+}
+
+.accion > * {
+  width: 100%;
+}
+
+.default .cabecera {
+  color: var(--md-sys-color-on-surface);
+}
+
+.error .cabecera {
+  color: var(--md-sys-color-error);
+}
+
+.success .cabecera {
+  color: var(--md-sys-color-tertiary);
+}
+
+.postponed .cabecera {
+  color: var(--md-sys-color-postponed);
+}
