@@ -18,7 +18,7 @@ const estados: Record<Estado, { icono: IconName; palabra: string }> = {
   pendiente: { icono: 'schedule', palabra: 'Pendiente' },
   critica: { icono: 'priority_high', palabra: 'Crítica' },
   completada: { icono: 'check', palabra: 'Completada' },
-  reprogramada: { icono: 'event_repeat', palabra: 'Reprogramada' },
+  reprogramada: { icono: 'snooze', palabra: 'Reprogramada' },
   noRealizada: { icono: 'close', palabra: 'No realizada' },
   sinUso: { icono: 'info', palabra: 'Sin uso' },
   sincronizado: { icono: 'check', palabra: 'Sincronizado' },
