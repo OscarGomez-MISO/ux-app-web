@@ -33,6 +33,20 @@
   background: var(--md-sys-color-surface-container-low);
 }
 
+/* Compacta: filas de 28 y sin separadores, para una tabla dentro de una tarjeta */
+.filaCompacta {
+  border-bottom: none;
+}
+
+.filaCompacta:hover {
+  background: none;
+}
+
+.celdaCompacta {
+  height: 28px;
+  padding: 0;
+}
+
 /* Las celdas numéricas van a la derecha; el resto a la izquierda */
 .derecha {
   text-align: right;
