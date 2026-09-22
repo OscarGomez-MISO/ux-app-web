@@ -1,0 +1,99 @@
+/* W10 · Plantillas y cápsulas reutilizables · § 5.10 */
+
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+/* Cuatro plantillas de 216 × 200 y, a la derecha, crear desde cero */
+.plantillas {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(5, 216px);
+  gap: var(--sp-4);
+}
+
+/* Quinta tarjeta: borde discontinuo, sin fondo propio */
+.crear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: var(--sp-6);
+  color: var(--md-sys-color-primary);
+  text-align: center;
+  text-decoration: none;
+  border: 1px dashed var(--md-sys-color-outline);
+  border-radius: var(--r-md);
+}
+
+.crear:hover {
+  background: var(--md-sys-color-surface-container-low);
+}
+
+.plantilla {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.descripcion {
+  margin-top: var(--sp-1);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.cuenta {
+  margin-top: var(--sp-4);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.usar {
+  margin-top: auto;
+  padding-top: var(--sp-4);
+}
+
+/* Cabecera común de las dos tarjetas */
+.cabecera {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-4);
+}
+
+.nota {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.pie {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--sp-4);
+}
+
+/* Card «Cómo se combinan…» */
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+
+.pasoTitulo {
+  color: var(--md-sys-color-on-surface);
+}
+
+.pasoTexto {
+  margin-top: var(--sp-1);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.notaFinal {
+  margin-top: var(--sp-6);
+  color: var(--md-sys-color-on-surface-variant);
+}
