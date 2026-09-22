@@ -1,0 +1,75 @@
+/* W08 · Depuración de alarmas · § 5.8 */
+
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+/* Cuatro recuentos de 272 × 160, canal 16 */
+.recuentos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+}
+
+/* Card de selección */
+.seleccionCabecera {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-4);
+}
+
+.seleccionTitulo {
+  flex: 1;
+  color: var(--md-sys-color-on-surface);
+}
+
+.contador {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Banda de acciones · CW-05: un solo botón destructivo y el aviso a la vista */
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-height: 88px;
+}
+
+.aviso {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-left: auto;
+  color: var(--md-sys-color-error);
+}
+
+/* Card explicativa */
+.explicacionCabecera {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-6);
+}
+
+.explicacionNota {
+  color: var(--md-sys-color-error);
+}
+
+.explicacionColumnas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-6);
+  margin-top: var(--sp-6);
+}
+
+.columnaTitulo {
+  color: var(--md-sys-color-on-surface);
+}
+
+.columnaTexto {
+  margin-top: var(--sp-1);
+  color: var(--md-sys-color-on-surface-variant);
+}
