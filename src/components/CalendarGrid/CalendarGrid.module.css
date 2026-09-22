@@ -1,0 +1,114 @@
+/* CalendarGrid · ESPECIFICACION_WEB.md § 4.16 */
+
+.calendario {
+  position: relative;
+  flex: 0 0 752px;
+  width: 752px;
+  height: 520px;
+  overflow: hidden;
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--r-md);
+}
+
+.cabecera {
+  display: grid;
+  grid-template-columns: repeat(7, 96px);
+  align-items: center;
+  height: 80px;
+  margin-left: 72px;
+}
+
+.dia {
+  width: 88px;
+  height: 32px;
+  padding: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: var(--r-xl);
+}
+
+.dia:hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+.diaSeleccionado,
+.diaSeleccionado:hover {
+  color: var(--md-sys-color-on-secondary-container);
+  background: var(--md-sys-color-secondary-container);
+}
+
+.cuerpo {
+  position: relative;
+  height: 440px;
+  margin-left: var(--sp-6);
+}
+
+.horas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 392px;
+}
+
+.hora {
+  position: absolute;
+  left: 0;
+  width: 48px;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.rejilla {
+  position: absolute;
+  top: 0;
+  left: 48px;
+  width: 672px;
+  height: 392px;
+}
+
+.linea {
+  position: absolute;
+  left: 0;
+  width: 640px;
+  height: 1px;
+  background: var(--md-sys-color-outline-variant);
+}
+
+.bloque {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 88px;
+  height: 48px;
+  padding: 0 var(--sp-2);
+  overflow: hidden;
+  color: var(--md-sys-color-on-surface);
+  text-decoration: none;
+  border-radius: var(--r-sm);
+  transition:
+    box-shadow 120ms ease-out,
+    transform 120ms ease-out;
+}
+
+.bloque:hover {
+  box-shadow: var(--e-2);
+  transform: translateY(-1px);
+}
+
+.primario {
+  background: var(--md-sys-color-primary-container);
+}
+
+.neutro {
+  background: var(--md-sys-color-surface-container);
+}
+
+.error {
+  color: var(--md-sys-color-on-error-container);
+  background: var(--md-sys-color-error-container);
+}
+
+.exito {
+  color: var(--md-sys-color-on-tertiary-container);
+  background: var(--md-sys-color-tertiary-container);
+}

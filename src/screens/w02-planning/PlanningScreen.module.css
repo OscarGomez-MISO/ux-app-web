@@ -1,0 +1,84 @@
+/* W02 · Planificación semanal · ESPECIFICACION_WEB.md § 5.2 */
+
+.pantalla {
+  width: 100%;
+}
+
+.subnav {
+  margin-top: var(--sp-2);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-top: var(--sp-4);
+}
+
+.navegacionSemanas {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.rango {
+  margin-left: 112px;
+}
+
+.hoy {
+  min-width: 104px;
+  margin-left: auto;
+}
+
+.contenido {
+  display: grid;
+  grid-template-columns: 752px 352px;
+  gap: var(--sp-8);
+  margin-top: var(--sp-8);
+}
+
+.compromisos {
+  display: flex;
+  flex-direction: column;
+  width: 352px;
+  height: 520px;
+  background: var(--md-sys-color-surface-container-low);
+}
+
+.compromisos h2 {
+  max-width: 260px;
+}
+
+.listaCompromisos {
+  margin-top: 0;
+}
+
+.enlaceCompromiso {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--r-sm);
+}
+
+.filaCompromiso {
+  align-items: flex-start;
+  height: 72px;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.nuevaAlerta {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+@media (max-width: 1279px) {
+  .contenido {
+    grid-template-columns: minmax(0, 752px) 320px;
+    gap: var(--sp-6);
+  }
+
+  .compromisos {
+    width: 320px;
+  }
+}
