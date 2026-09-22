@@ -75,7 +75,7 @@
 
 .metricas {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
   gap: var(--sp-4);
   margin-top: var(--sp-8);
 }
@@ -158,5 +158,11 @@
   .columnas {
     grid-template-columns: minmax(0, 1fr) 320px;
     gap: var(--sp-6);
+  }
+}
+
+@media (min-width: 1600px) {
+  .metricas > * {
+    width: 100%;
   }
 }

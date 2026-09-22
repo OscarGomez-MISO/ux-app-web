@@ -79,7 +79,7 @@ export default function CalendarGrid({
               to={toBloque}
               className={`label-medium ${styles.bloque} ${styles[bloque.tono]}`}
               style={{
-                left: bloque.dia * 96,
+                left: `calc(${bloque.dia} * (100% / 7))`,
                 top: bloque.hora * 56 + 8,
               }}
               aria-label={`${bloque.titulo}, ${dias[bloque.dia]}, ${horas[bloque.hora]}`}

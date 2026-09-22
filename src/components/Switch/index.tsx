@@ -7,6 +7,8 @@ type SwitchProps = {
   'aria-label'?: string
   'aria-labelledby'?: string
   disabled?: boolean
+  /** Variante de 32 × 20 usada en listas densas. */
+  compacto?: boolean
   className?: string
 }
 
@@ -15,6 +17,7 @@ export default function Switch({
   on,
   onChange,
   disabled,
+  compacto = false,
   className,
   ...rest
 }: SwitchProps) {
@@ -25,7 +28,9 @@ export default function Switch({
       aria-checked={on}
       disabled={disabled}
       onClick={() => onChange(!on)}
-      className={[styles.control, className].filter(Boolean).join(' ')}
+      className={[styles.control, compacto && styles.compacto, className]
+        .filter(Boolean)
+        .join(' ')}
       {...rest}
     >
       <span
