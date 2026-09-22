@@ -96,7 +96,9 @@ export function TemplatesScreen() {
       {/* Fuera de la tarjeta y sin navegación: crear una cápsula no entra en
           las diez pantallas */}
       <div className={styles.pie}>
-        <Button tipo="secundario">{rotulos.nuevaCapsula}</Button>
+        <Button tipo="secundario" aria-disabled="true">
+          {rotulos.nuevaCapsula}
+        </Button>
       </div>
 
       <Card tipo="superficie">
